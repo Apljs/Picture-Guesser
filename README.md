@@ -3,6 +3,8 @@ A Machine Learning Program that to guesses what a given picture is.
 
 This program uses images from the web to give you three guesses on what it could be and the accuracy of the guess.
 
+Made with HTML5, CSS, JS, jQuery, and Bootstrap.
+
 Images sourced from wikipedia best work with the application as 
 tensorflow machine learning may have issues in regards to sourcing permissions to properly access images from other sites.
 
