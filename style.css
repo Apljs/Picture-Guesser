@@ -1,0 +1,31 @@
+  .center {
+    text-align: center;
+  }
+  .bar-format {
+    border-style: solid;
+    border-width: 1px;
+    background-color: gold;
+    border-color: gold;
+    color: white;
+    font-size: x-large;
+    font-family:'Times New Roman', Times, serif;
+  }
+#img {
+    margin: 8px;
+  }
+  
+  #status {
+    padding: 8px;
+  }
+  
+  .not-ready {
+    color: red;
+  }
+  
+  .ready {
+    color: green;
+  }
+  
+  .predict-button {
+    margin: 8px;
+  }

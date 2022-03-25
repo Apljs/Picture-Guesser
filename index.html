@@ -1,0 +1,44 @@
+<html>    
+  <head>
+    <title>Picture Guesser</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- Load the latest version of TensorFlow.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://unpkg.com/@tensorflow/tfjs"></script>
+    <script src="https://unpkg.com/@tensorflow-models/mobilenet"></script>
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <nav class="center bar-format">
+      <label>Picture Guesser</label>
+    </nav>
+    <div id="main" class="center">
+      <h1 class="pt-3 pb-1">Picture Guesser</h1>
+      <div class="form-text">Uses Machine Learning to guess a picture</div>
+      <div id="status" class="not-ready">Model is loading...</div>
+      <!-- Add an image that we will use to test -->
+      <div id="text">
+          <label for="box">Change current picture via URL</label>
+          <input type="url" id="box" name="box">
+          <button type="button" class="btn btn-outline-primary" onclick="imgChange()">Submit</button>
+          <div class="mb-2 font-weight-lighter text-danger">Only works with publicly accessible photos (Wikipedia is reccomended).</div>
+      </div>
+      <!-- Load the results -->
+      <div id="app">
+        <img id="img" crossorigin src="https://upload.wikimedia.org/wikipedia/commons/a/ae/Western_honey_bee_on_a_honeycomb.jpg" width="auto" height="20%"/>
+        <br/>
+        <button type="button" class="predict-button btn btn-primary" onclick="predict()">Show Results</button>
+        <button type="button" class="predict-button btn btn-outline-danger" onclick="clearResults()">Clear Results</button>
+        <h2 class="mt-4">
+          Results
+        </h2>
+        <div id="result">
+        </div>
+      </div>
+  </div>
+  </body>
+</html>
